@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Rubik+Glitch&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <meta name="viewport" content="device-width initial scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dax Animations</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      .video-background {
+        background: #000;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -99;
+      }
+      .video-foreground,
+      .video-background iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      @media (min-aspect-ratio: 16/9) {
+        .video-foreground {
+          height: 300%;
+          top: -100%;
+        }
+      }
+      @media (max-aspect-ratio: 16/9) {
+        .video-foreground {
+          width: 300%;
+          left: -100%;
+        }
+      }
+      .content {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .content h1 {
+        font-size: 160px;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        color: transparent;
+        text-align: center;
+        -webkit-text-stroke: 2px white;
+      }
+      .content h2 {
+        font-size: 40px;
+        color: #fff;
+        font-weight: 400;
+        font-family: "Poppins", sans-serif;
+      }
+      .content1 {
+        text-align: center;
+      }
+      .content1 h2 {
+        font-size: 40px;
+        color: transparent;
+        text-align: center;
+        font-weight: 400;
+        margin-top: 160px;-webkit-text-stroke: 1px white;
+      
+        font-family: "Poppins", sans-serif;;  background: url(https://i.postimg.cc/htxsK57G/back.png);
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 60s linear infinite;
+      }
+      .content1 p {
+        color: #fff;
+      }
+      .content2 {
+        justify-content: space-between;
+      }
+
+      .about-col {
+        float: left;
+        width: 50%;
+        padding: 15px;
+      }
+
+      .content2::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .content2 h2 {
+        font-size: 40px;
+        color: transparent;
+        text-align: center;
+        font-weight: 400;
+        margin-top: 160px;-webkit-text-stroke: 1px white;  background: url(https://i.postimg.cc/htxsK57G/back.png);
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 60s linear infinite;
+        font-weight: 400;
+        margin-top: 15px;
+        font-family: "Poppins", sans-serif;
+      
+      
+        font-family: "Poppins", sans-serif;
+      }
+      .content2 p {
+        color: #fff;
+      }
+
+      .about-col p {
+        padding: 15px 0 25px;
+      }
+      .form {
+        color:#fff;
+        width: 80%;
+        margin: auto;
+        padding-top: 80px;
+        padding-bottom: 50px;
+      }
+      .form h2{ 
+        color: transparent;
+        text-align: center;
+        font-weight: 400;
+        margin-top: 15px;
+      -webkit-text-stroke: 1px white;
+        font-family: "Poppins", sans-serif;  background: url(https://i.postimg.cc/htxsK57G/back.png);
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 60s linear infinite;
+        font-weight: 400;
+        margin-top: 15px;
+        font-family: "Poppins", sans-serif;
+      
+       }   
+
+      .footer {
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+        color:#fff;
+      }
+
+      .footer img {
+        align-items: center;
+        max-width: 20px;
+        max-height: 20px;
+        width : 30%;
+        margin: 0 10px 0 0;
+      }
+      .m{
+    border: none;
+    padding-top: 5px;
+    
+    padding-bottom: 5px;
+    
+    padding-left: 10px;
+    
+    padding-right: 10px;
+border-radius: 20px;
+}
+.L{
+                    margin-top: 10px;
+                    width: 265px;
+                    height: 40px;
+                    border: none;
+                    border-radius: 10px;
+                background-color:  whitesmoke;
+            color: #36f4f1;
+            font-weight: bold;   
+            text-align: center;
+            margin-right: 50px;
+            cursor: pointer;
+            }
+            .L:hover{
+                background-color: #36f4f1;
+                color: white;
+                transition: 0.5s;
+            }
+            .L:active
+            {
+                opacity: 0.6;
+                transition: 0.5s;
+            }
+
+      @keyframes back {
+        100% {
+          background-position: 2000px 0;
+        }
+      
+      }      h1{
+          position: relative;
+          font-family:"Poppins", sans-serif;
+          font-size: 40px;
+
+        }
+h1::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0% ;
+  left: 0%;
+  width: 0%;
+  height: 100%;
+  color: white;
+  border-right: 2px solid white;
+  overflow: hidden;
+  animation: animate 8s linear infinite;
+}  
+@keyframes animate {0%,10%,80%,100%{
+  width: 0;
+}
+70%{
+  width: 100%;
+}
+  
+}
+h2{
+    position: relative;
+    margin: 0;
+    z-index: 1;
+    overflow: hidden;
+    font-weight: 400;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+  }
+  .content5{
+    position: relative;
+    box-sizing: border-box;
+  }
+  body
+  {
+    
+  }
+  .content5 h2{
+position: absolute;
+color: #fff;
+transform: translate(-50% 50%);
+margin-left: 30%;
+font-size: 50px;
+  }
+  .content5 h2:nth-child(1)
+  {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+  }
+  .content5 h2:nth-child(2)
+ {
+   color: white;
+   animation: animate1 4s ease-in-out infinite;
+ } 
+ @keyframes animate1 {
+   0%,100%
+   {
+   clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100%  52%, 100% 100%, 0% 100%);
+ }
+ 50%{
+  clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100%  46%, 100% 100%, 0% 100%);
+ }
+   
+ }
+    </style>
+    <header>
+      <div class="video-background">
+        <div class="video-foreground">
+          <iframe
+            src="https://www.youtube.com/embed/lrf-GAYUOkQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=lrf-GAYUOkQ&mute=1"
+            frameborder="0"
+            allowfullscreen
+            allow="autoplay"
+          ></iframe>
+        </div>
+      </div>
+    </header>
+    <div class="content"><center><h1 data-text="Dax_Animations">Dax_Animations</h1></div>
+    </center><
+      <div class="content5">
+      <h2>World Class Animations</h2>
+      <h2>World Class Animations</h2>
+    </div>
+    <div class="content1">
+      <div class="spac">
+       <h2> ABOUT US</h2>
+      </div>
+      <br />
+      <p>
+        Dax Animations is an American animation studio that creates animated features and short films for The Walt Disney Company. The company's production logo features a scene from its first synchronized sound cartoon, Steamboat Willie (1928). Founded on October 16, 1923, by brothers Walt Disney and Roy O. Disney,[1] it is the oldest-running animation studio in the world. It is currently organized as a division of Walt Disney Studios and is headquartered at the Roy E. Disney Animation Building at the Walt Disney Studios lot in Burbank, California.[7] Since its foundation, the studio has produced 60 feature films, from Snow White and the Seven Dwarfs (1937) to Encanto (2021),[8] and hundreds of short films.
+<br>For much of its existence, the studio was recognized as the premier American animation studio[9] and was "for many decades the undisputed world leader in animated features";[10] it developed many of the techniques, concepts and principles that became standard practices of traditional animation.[11] The studio also pioneered the art of storyboarding, which is now a standard technique used in both animated and live-action filmmaking.[12] The studio's catalog of animated features is among Disney's most notable assets, with the stars of its animated shorts – Mickey Mouse, Minnie Mouse, Donald Duck, Daisy Duck, Goofy, and Pluto – becoming recognizable figures in popular culture and mascots for The Walt Disney Company as a whole
+      </p>
+    </div>
+    <div class="content2">
+      <div class="spac">
+        <h2><span>N</span><span>E</span><span class="letter"></span><span>W</span><span>S</span>
+      </h2></div>
+      <div class="about-col">
+        <p>
+          <iframe
+            width="720"
+            height="480"
+            src="https://www.youtube.com/embed/CaimKeDcudo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </p>
+      </div>
+      <div class="about-col">
+        <p>
+          <iframe
+            width="720"
+            height="480"
+            src="https://www.youtube.com/embed/LKFuXETZUsI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </p>
+      </div>
+    </div>
+    <div class="form"><center>
+      <h2 style="color: transparent;-webkit-text-stroke:1px white; font-size: 40px; ">
+        
+        <div class="spac">
+          <span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span class="letter">CT</span>
+          <span> U</span><span>S</span>
+        </div>
+      </h2>
+  
+  <br />
+  <form onsubmit="myFunction()"></element>
+
+      <label > First Name : </label>
+      <input type="text" name="firstname" placeholder="Enter First Name" class="m" required> <br> <br>
+      <label> Last Name : </label>
+      <input type="text" name="lastname"placeholder="Enter Last Name"  class="m"required> <br> <br>
+
+      <label style="margin-left: auto;">
+          Country : 
+      </label>
+      <select class="m" style="margin-left: 20px;"required>
+          <option value="Course">Country</option>
+          <option value="B.Tech">India</option>
+          <option value="BBA">China</option>
+          <option value="BA">USA</option>
+
+          <option value="MBA">Russia</option>
+          <option value="MCA">Pakistan</option>
+          <option value="M.Tech">Bangladesh</option>
+      </select>
+
+      <br>
+      <br>
+      <label>
+      Gender : 
+      </label>
+      <input type="radio" name="Gender" /> Male 
+      <input type="radio" name="Gender" /> Female 
+      <input type="radio" name="Gender" /> Other
+      <br>
+      <br>
+
+      <label>
+      Phone : 
+      </label>
+      <input type="text" name="country code" value="+91" size="1" class="m"required>
+      <input type="text" name="phone" size="0px" class="m" placeholder="Enter Phone Number" required> <br> <br>
+      Address :
+      <br>
+      <textarea cols="80" rows="5" value="address " class="m" style="margin-top: 10px;" required> 
+      </textarea>
+      <br> <br>
+      Email : 
+      <input type="email" id="email" name="email" class="m" placeholder="Enter your E-mail"required> <br>
+      <br> 
+      Password:
+      <input type="Password" id="pass" name="pass" class="m" placeholder="Enter your Password" required> <br>
+      <br> 
+
+      <button type="submit" class="L" style="margin-left: 30px;">SUBMIT</button>
+      <script>
+          function myFunction() {
+            alert("The form was submitted");
+          }
+          </script>
+  </form>
+</center>
+</div>
+<div class="footer">
+    <img
+      src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png"
+    />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+    />
+    <img
+      src="https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429-thumb.png"
+    />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png"
+    />
+</div>
+  </body>
+</html>
